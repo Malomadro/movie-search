@@ -32,7 +32,7 @@ const inputSearchHandler = (e) => {
     if (searchSrting && searchSrting.length > 3 && searchLast !== searchSrting) {
       if (!triggerMode) clearMoviesMarkup(movieList)
 
-      getData(`http://www.omdbapi.com/?apikey=303ac054&s=${searchSrting}`)
+      getData(`https://www.omdbapi.com/?apikey=303ac054&s=${searchSrting}`)
         .then((movies) => movies.forEach((movie => addMovieToList(movie))))
         .catch(console.log)
     }
